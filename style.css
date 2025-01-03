@@ -1,0 +1,256 @@
+:root{
+  --font-color: hsl(217, 19%, 35%);
+  --secondary-font-color: hsl(214, 17%, 51%);
+  --bg-color: hsl(212, 23%, 69%);
+  --component-bg: hsl(210, 46%, 95%);
+}
+
+.manrope-bold{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.manrope-regular{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@keyframes normalAppear{
+  0%{
+    opacity: 0%;
+    transform: translate(50%, 4em);
+  }100%{
+    opacity: 100%;
+    transform: translate(50%, 0);
+  }
+}
+@keyframes normalAppearMobile{
+  0%{
+    opacity: 0%;
+    transform: translate(0, 3em);
+  }100%{
+    opacity: 100%;
+    transform: translate(0, 0);
+  }
+}
+@keyframes NormalDisappear{
+  100%{
+    opacity: 0%;
+    transform: translate(50%, 4em);
+  }0%{
+    opacity: 100%;
+    transform: translate(50%, 0);
+  }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100dvh;
+    height: 100vh;
+    background: var(--component-bg);
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.unit{
+  max-height: 22em;
+  max-width: 55em;
+  border-radius: 1em;
+  background:var(--component-bg);
+  box-Shadow: 1em 1em 5em var(--bg-color);
+}
+
+h1{
+  font-size: 1.25em;
+  margin-top: 0;
+  color: var(--font-color);
+}
+p{
+  font-size:1em;
+  color: var(--secondary-font-color);
+}
+
+.unit__imageContainer{
+  height: 22em;
+  overflow: hidden;
+  width: 70em;
+  background: red;
+  background-image: url("src/imgs/drawers.jpg");
+  background-size: 150%;
+  border-radius: 1em 0 0 1em;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.share{
+  background: var(--font-color);
+  color: var(--component-bg);
+  letter-spacing: 0.5em;
+  font-weight: 200;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  font-size: 0.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  top: -4em;
+  right: 50%;
+  transform: translateX(50%);
+  display: none;
+  box-shadow: 1px 1px 1px #0004;
+}
+
+.share::after{
+  content: '';
+  width: 1em;
+  position: absolute;
+  left: 50%;
+  bottom: -0.5em;
+  height: 1em;
+  background: var(--font-color);
+  transform: translate(-50%, 0) rotate(45deg);
+  box-shadow: 1px 1px 1px #0004;
+}
+
+.share-icon{
+  background: var(--bg-color);
+  width: 1em;
+  padding: 0.5em;
+  border-radius: 50%;
+  background-image: url("src/imgs/icon-share.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+}
+
+.share-icon:hover{
+  background-color: var(--font-color);
+}
+.share-icon:hover .icon{
+  fill: var(--bg-color);
+}
+
+.unit__son{
+  padding: 2.5em;
+}
+
+.profile{
+  justify-content: space-between;
+}
+
+.profile_snippet img{
+  width: 3em;
+  border-radius: 50%;
+}
+
+.profile_snippet{
+  gap: 1em;
+}
+
+.profile_snippet__name{
+  align-items: flex-start;
+}
+
+h2{
+  font-size: 1em;
+  margin: 0;
+}
+
+.date{
+  font-size: 0.75em;
+}
+.shareMobile{
+  display: none;
+}
+
+@media(max-width: 28em){
+  .icon{
+    background: var(--secondary-font-color);
+    padding: 1em;
+    margin-left: 2em;
+    border-radius: 50%;
+  }
+  .unit{
+    position: relative;
+    flex-direction: column;
+    max-width:90%;
+    max-height: initial;
+    overflow: hidden;
+  }
+  .unit__imageContainer{
+    background-size: 100%;
+    height: initial;
+    width: 100%;
+    height: 18em;
+    border-radius: 0;
+  }
+  .profile_snippet img{
+    width: 3em;
+  }
+  .unit__son{
+    padding: 0.5em 2em;
+  }
+  .share{
+    top: 0;
+    right: 0;
+    gap: 1em;
+    padding: 1em 0;
+    height: 2em;
+    font-size: 1em;
+  }
+  .unit__son{
+    padding: 2em;
+  }
+  .icon-share{
+    width: 1.5em;
+  }
+  .icon-share img{
+    width: 1.5em;
+  }
+  .icon-share.sh{
+    margin-left: 2em;
+  }
+  .shareMobile{
+    display: none;
+    background: var(--font-color);
+    color: var(--component-bg);
+    letter-spacing: 0.5em;
+    font-weight: 200;
+    padding: 1em 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0.5em;
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    height: 3em;
+    width: 100%;
+    display: none;
+    box-shadow: 1px 1px 1px #0004;
+  }
+}
