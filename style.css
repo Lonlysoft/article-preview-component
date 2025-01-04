@@ -88,12 +88,16 @@ body {
 }
 
 h1{
-  font-size: 1.25em;
+  font-size: 1.5em;
   margin-top: 0;
   color: var(--font-color);
 }
 p{
-  font-size:1em;
+  font-size: 0.9em;
+  color: var(--secondary-font-color);
+}
+
+.date{
   color: var(--secondary-font-color);
 }
 
@@ -116,7 +120,7 @@ p{
   color: var(--component-bg);
   letter-spacing: 0.5em;
   font-weight: 200;
-  padding: 1em 2em;
+  padding: 1em 2.5em;
   border-radius: 0.5em;
   font-size: 1em;
   display: flex;
@@ -128,6 +132,9 @@ p{
   transform: translateX(50%);
   display: none;
   box-shadow: 0 1em 1em #0002;
+}
+.share img{
+  width: 2em;
 }
 
 .share::after{
@@ -164,6 +171,7 @@ p{
 
 .unit__son{
   padding: 2.5em;
+  min-width: 28em;
 }
 
 .profile{
@@ -181,6 +189,7 @@ p{
 
 .profile_snippet__name{
   align-items: flex-start;
+  color: var(--font-color);
 }
 
 h2{
@@ -220,7 +229,14 @@ h2{
     width: 3em;
   }
   .unit__son{
+    min-width: initial;
     padding: 0.5em 2em;
+  }
+  h1{
+    font-size: 1em;
+  }
+  p{
+    font-size: 0.8em;
   }
   .share{
     top: 0;
