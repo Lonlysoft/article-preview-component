@@ -19,6 +19,14 @@
   font-style: normal;
 }
 
+.manrope-thin{
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
 @keyframes normalAppear{
   0%{
     opacity: 0%;
@@ -93,6 +101,7 @@ p{
   height: 22em;
   overflow: hidden;
   width: 70em;
+
   background-image: url("src/imgs/drawers.jpg");
   background-size: 150%;
   border-radius: 1em 0 0 1em;
