@@ -110,12 +110,12 @@ p{
   font-weight: 200;
   padding: 1em 2em;
   border-radius: 0.5em;
-  font-size: 0.6em;
+  font-size: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
-  top: -4em;
+  top: -6em;
   right: 50%;
   transform: translateX(50%);
   display: none;
@@ -135,7 +135,7 @@ p{
 }
 
 .share-icon{
-  background: var(--bg-color);
+  background: hsl(212, 23%, 89%);
   width: 1em;
   padding: 0.5em;
   border-radius: 50%;
